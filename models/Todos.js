@@ -23,6 +23,10 @@ Todos.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
+        todo_status: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

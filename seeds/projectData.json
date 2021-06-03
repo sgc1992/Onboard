@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Welcome Lunch",
+        "description": "Your first day meet the team for lunch!",
+        "date_due": "26/09/2021"
+    },
+    {
+        "title": "Meet CEO",
+        "description": "Company history and future vision",
+        "date_due": "26/09/2021"
+    },
+    {
+        "title": "Meet HR Manager",
+        "description": "Meet the team!",
+        "date_due": "26/09/2021"
+    }
+]

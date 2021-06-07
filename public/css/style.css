@@ -1,95 +1,68 @@
-/* ==================== FONT ===================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap");
-
-:root {
-  --gradient-main: linear-gradient(0.25turn, #00f5a0, #00d9f5);
-
-  /* ================ DEFAULT COLOURS ==================== */
-  --sidebar-color: #242424;
-  --main-color: #fff;
-  --sub-heading: #6d6d6d;
-
-  /* ================ DEFAULT SIZE ==================== */
-  --logo-text: 3.5vw;
-  --sidebar-text: 2vw;
-  --sub-text: 1.5vw;
-  --welcome-text: 100px;
-
-  /* ================ DEFAULT FONT ==================== */
-}
-
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+form {
+  border: 3px solid #f1f1f1;
 }
 
-.sidebar {
-  background-color: var(--sidebar-color);
+h1,
+h2 {
+  font-family: "Audiowide", sans-serif;
 }
-
-.content {
-  background: var(--gradient-main);
-}
-
-.btn {
-  font-size: var(--sidebar-text);
+#rcorners1 {
   border-radius: 25px;
-  color: var(--main-color);
+  background: #73ad21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+input[type="text"],
+input[type="password"] {
   width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.btn p,
-.logout p {
-  margin-bottom: 0;
-}
-
-.btn img {
-  margin-right: 1vw;
-}
-
-.btn:hover {
-  background: var(--gradient-main);
-  color: var(--main-color);
-}
-.nav-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  height: auto;
-}
-
-.logout {
-  display: flex;
+button {
+  background-color: #04aa6d;
   color: white;
-  text-decoration: none;
-  align-items: center;
-  margin: 2.5vw;
-  width: auto;
-  height: auto;
-  border-radius: 25px;
-}
-
-.logout:hover {
-  color: var(--main-color);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
   cursor: pointer;
+  width: 100%;
 }
 
-.tool {
-  font-size: var(--sub-text);
+button:hover {
+  opacity: 0.8;
 }
 
-.logo h1 {
-  font-size: var(--logo-text);
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
 }
 
-.welcome-wrapper h2 {
-  font-size: var(--welcome-text);
-  color: var(--main-color);
+.container {
+  padding: 16px;
 }
 
-.welcome-wrapper p {
-  font-weight: 300;
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
 }

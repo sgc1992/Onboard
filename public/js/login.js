@@ -48,3 +48,13 @@ const signupFormHandler = async (event) => {
     alert('Please enter a username & password')
   };
 };
+
+//Event Listeners
+document
+  .querySelector('#loginBtn')
+  .addEventListener('click', loginFormHandler);
+
+document
+  .querySelector('#signupBtn')
+  .addEventListener('click', signupFormHandler);
+  

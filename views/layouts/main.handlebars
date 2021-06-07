@@ -61,14 +61,16 @@
             <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Logout</p>
         </a>
         {{else}}
-        <a class="login">
+        <a class="login" href="/login">
             <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Login</p>
         </a>
     </div>
     {{{ body }}}
 </main>
 
-
+    {{#if logged_in}}
+    <script src='/js/logout.js'></script>
+    {{/if}}
 
 </body>
 </html>

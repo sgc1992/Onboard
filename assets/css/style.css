@@ -9,12 +9,15 @@
   --sidebar-color: #242424;
   --main-color: #fff;
   --sub-heading: #6d6d6d;
+  --date: #C4C4C4;
+
 
   /* ================ DEFAULT SIZE ==================== */
   --logo-text: 3.5vw;
   --sidebar-text: 2vw;
   --sub-text: 1.5vw;
   --welcome-text: 100px;
+  --date-text: 26px;
 
   /* ================ DEFAULT FONT ==================== */
 }
@@ -92,4 +95,26 @@ body {
 
 .welcome-wrapper p {
   font-weight: 300;
+}
+
+.calender-headings h1 {
+  font-size: var(--welcome-text);
+}
+
+.calender-headings h2 {
+  font-size: var(--date-text);
+  color: var(--date);
+  font-weight: 800;
+}
+
+.calender-cubes > div{
+  width: 115px;
+  height: 115px;
+  left: 427px;
+  top: 315px;
+
+  margin: 20px ;
+
+  background: rgba(68, 68, 68, 0.6);
+  border-radius: 10px;
 }

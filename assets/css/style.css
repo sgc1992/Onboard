@@ -18,6 +18,7 @@
   --sub-text: 1.5vw;
   --welcome-text: 100px;
   --date-text: 26px;
+  --week-text: 18px;
 
   /* ================ DEFAULT FONT ==================== */
 }
@@ -107,14 +108,25 @@ body {
   font-weight: 800;
 }
 
-.calender-cubes > div{
+.cube {
   width: 115px;
   height: 115px;
-  left: 427px;
-  top: 315px;
 
-  margin: 20px ;
+  margin: 10px ;
 
   background: rgba(68, 68, 68, 0.6);
   border-radius: 10px;
+}
+
+.calender-container {
+  margin-left: 20vh;
+}
+
+.calender-headings > h1 {
+  margin-bottom: -10px ;
+  margin-top: -40px;
+}
+
+.col > h3 {
+  font-size: var(--week-text) ;
 }

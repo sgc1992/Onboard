@@ -20,4 +20,4 @@ Todos.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, Project, Todos };

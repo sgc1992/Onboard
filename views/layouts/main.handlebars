@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboard</title>
+    <link rel='stylesheet' href='/css/jass.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css'>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-start vh-100">
+            <div class="sidebar col-3 h-100 p-5">
+                <div class="sidebar-wrapper display-flex flex-column h-100">
+                    <div class="logo text-center display-flex w-100">
+                        <img src="assets/Images/Logo.png">
+                        <h1 class="text-white">Onboard</h1>
+                    </div>
+                    <div class="tool text-secondary">
+                        <p>Tools</p>
+                    </div>
+
+                    <div class="button-wrapper p-2">
+                        <a class="btn">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/four-squares.png"/><p>Dashboard</p>
+                        </a>
+
+                        <a class="btn">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/event-accepted-tentatively.png"/><p>Calender</p>
+                        </a>
+
+                        <a class="btn">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/todo-list.png"/><p>To-Do List</p>
+                        </a>
+
+                        <a class="btn">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/briefcase.png"/><p>Company</p>
+                        </a>
+                    </div>
+
+                    <div class="tool text-secondary">
+                        <p>Other</p>
+                    </div>
+
+                    <div class="button-wrapper p-2">
+                        <a class="btn">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Chat</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<main>
+    <div class="nav-wrapper">
+        {{#if logged_in}}
+        <a class="logout">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Logout</p>
+        </a>
+        {{else}}
+        <a class="login">
+            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Login</p>
+        </a>
+    </div>
+    {{{ body }}}
+</main>
+
+
+
+</body>
+</html>

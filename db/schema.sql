@@ -3,5 +3,5 @@ DROP DATABASE IF EXISTS onboard_db;
 CREATE DATABASE onboard_db;
 
 -- use this schema for local host
-DROP DATABASE IF EXISTS tu4j0moodwsbylle;
-CREATE DATABASE tu4j0moodwsbylle;
+DROP DATABASE IF EXISTS onboardlocal_db;
+CREATE DATABASE onboardlocal_db;

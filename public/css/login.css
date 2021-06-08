@@ -1,0 +1,106 @@
+/* ==================== FONT ===================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap");
+
+:root {
+  /* ================ DEFAULT FONT ==================== */
+  --default: "Poppins", sans-serif;
+}
+
+/* ============card============ */
+.login-card {
+    
+    width: 986px;
+    height: 561px;
+    left: 100px;
+    top: 200px;
+
+    background: rgba(68, 68, 68, 0.6);
+    border-radius: 50px;
+
+    border-color: transparent;
+}
+
+.login-head {
+    position: absolute;
+    left: 139px;
+    top: 99px;
+
+    font-family: var(--default) ;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 86px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.login-form {
+    border-color: transparent;
+    position: absolute;
+    top: 216px ;
+    left: 215px;
+}
+
+.github-icon {
+    margin-left: 388px;
+    margin-top: 10px;
+}
+
+.google-icon {
+    margin-top: 10px;
+}
+
+#username, #password {
+    width: 635px;
+    height: 78px;
+    left: 442px;
+    top: 467px;
+    margin-bottom: 40px;
+
+    background: #FFFFFF;
+    border-radius: 50px;
+}
+
+::placeholder {
+    font-family: var(--default) ;
+    font-size: 40px;
+    color:#B1B1B1, 100%;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#B1B1B1, 100%;
+    font-family: var(--default);
+    font-size: 40px;
+    text-align: center;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color:#B1B1B1, 100%;
+    font-family: var(--default);
+    font-size: 40px;
+    text-align: center;
+}
+
+.login-button {
+    position: relative;
+    width: 100px;
+    height: 50px;
+
+    background: white;
+}
+
+.person-icon {
+    position: absolute;
+    top: 220px;
+    left: 136px;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 349px;
+    left:139px;
+}

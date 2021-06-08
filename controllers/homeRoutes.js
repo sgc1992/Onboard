@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Project, Todos, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// render homepage with 
+// render homepage with todos
 router.get('/', async (req, res) => {
     try {
         const todosData = await Todos.findAll({

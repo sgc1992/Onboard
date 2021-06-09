@@ -66,3 +66,36 @@ span.psw {
     width: 100%;
   }
 }
+
+.calender-headings h1 {
+  font-size: var(--welcome-text);
+}
+
+.calender-headings h2 {
+  font-size: var(--date-text);
+  color: var(--date);
+  font-weight: 800;
+}
+
+.cube {
+  width: 115px;
+  height: 115px;
+
+  margin: 10px ;
+
+  background: rgba(68, 68, 68, 0.6);
+  border-radius: 10px;
+}
+
+.calender-container {
+  margin-left: 20vh;
+}
+
+.calender-headings > h1 {
+  margin-bottom: -10px ;
+  margin-top: -40px;
+}
+
+.col > h3 {
+  font-size: var(--week-text) ;
+}

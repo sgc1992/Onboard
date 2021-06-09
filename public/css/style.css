@@ -1,14 +1,144 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-form {
-  border: 3px solid #f1f1f1;
+/* ==================== FONT ===================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap");
+
+:root {
+  --gradient-main: linear-gradient(0.25turn, #00f5a0, #00d9f5);
+
+  /* ================ DEFAULT COLOURS ==================== */
+  --sidebar-color: #242424;
+  --main-color: #fff;
+  --sub-heading: #6d6d6d;
+
+  /* ================ DEFAULT SIZE ==================== */
+  --logo-text: 50px;
+  --sidebar-text: 30px;
+  --sub-text: 30px;
+  --welcome-text: 100px;
+
+  /* ================ DEFAULT FONT ==================== */
 }
 
-h1,
-h2 {
-  font-family: "Audiowide", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #242424;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
+
+/* =================================== NAV - MAIN ================================ */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #242424;
+  height: 170px;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient {
+  position: absolute;
+  width: 1378px;
+  height: 1319px;
+  left: 581px;
+  top: -763px;
+  z-index: -3;
+  background: linear-gradient(90deg, #00f5a0 0%, #00d9f5 100%);
+  filter: blur(500px);
+  overflow-x: hidden;
+}
+
+.btn {
+  font-size: var(--sidebar-text);
+  border-radius: 25px;
+  color: var(--main-color);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.25em;
+}
+
+.btn p,
+.logout p {
+  margin: 0;
+}
+
+.navbar p {
+  margin-left: 1vw;
+}
+
+.btn:hover {
+  background: var(--gradient-main);
+  color: var(--main-color);
+}
+/* =================================== LOGIN ================================ */
+.container-login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.card {
+  width: 80%;
+  height: 60%;
+  background: rgba(68, 68, 68, 0.6);
+  border-radius: 50px;
+  padding: 3em;
+}
+
+.login-wrapper {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-form {
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.signup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.submit-button {
+  width: 30%;
+  background: var(--gradient-main);
+  font-family: "Poppins", sans-serif;
+  margin-top: 3vh;
+  color: #fff;
+  border-radius: 25px;
+}
+
+/* =================================== LOGIN ================================ */
+
 #rcorners1 {
   border-radius: 25px;
   background: #73ad21;
@@ -16,6 +146,8 @@ h2 {
   width: 200px;
   height: 150px;
 }
+
+/* =================================== LOGIN ================================ */
 
 input[type="text"],
 input[type="password"] {
@@ -25,20 +157,6 @@ input[type="password"] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-}
-
-button {
-  background-color: #04aa6d;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
 }
 
 .cancelbtn {
@@ -81,7 +199,7 @@ span.psw {
   width: 115px;
   height: 115px;
 
-  margin: 10px ;
+  margin: 10px;
 
   background: rgba(68, 68, 68, 0.6);
   border-radius: 10px;
@@ -92,10 +210,10 @@ span.psw {
 }
 
 .calender-headings > h1 {
-  margin-bottom: -10px ;
+  margin-bottom: -10px;
   margin-top: -40px;
 }
 
 .col > h3 {
-  font-size: var(--week-text) ;
+  font-size: var(--week-text);
 }

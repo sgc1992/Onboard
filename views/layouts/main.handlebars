@@ -13,63 +13,39 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row align-items-start vh-100">
-            <div class="sidebar col-3 h-100 p-5">
-                <div class="sidebar-wrapper display-flex flex-column h-100">
-                    <div class="logo text-center display-flex w-100">
-                        <img src="assets/Images/Logo.png">
-                        <h1 class="text-white">Onboard</h1>
-                    </div>
-                    <div class="tool text-secondary">
-                        <p>Tools</p>
-                    </div>
+    <header class="navbar navbar-dark bg-dark header-container">
+        <div class="logo text-center display-flex w-100">
+            <a href="/"><img src="assets/Images/Logo.png">
+            <h1 class="text-white">Onboard</h1>
+            </a>
+        </div>
+        <nav class='nav-container'>
+            <a class="btn" href="/">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/four-squares.png"/><p>Dashboard</p>
+            </a>
 
-                    <div class="button-wrapper p-2">
-                        <a class="btn">
-                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/four-squares.png"/><p>Dashboard</p>
-                        </a>
+            <a class="btn" href="/todos">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/todo-list.png"/><p>To-Do List</p>
+            </a>
 
-                        <a class="btn">
-                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/event-accepted-tentatively.png"/><p>Calender</p>
-                        </a>
+            {{#if logged_in}}
+            <a class="logout" id="logoutBtn">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Logout</p>
+            </a>
+            {{else}}
+            <a class="login" href="/login">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Login</p>
+            </a>
+            {{/if}}
+        </nav>
+    </header>
 
-                        <a class="btn">
-                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/todo-list.png"/><p>To-Do List</p>
-                        </a>
-
-                        <a class="btn">
-                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/briefcase.png"/><p>Company</p>
-                        </a>
-                    </div>
-
-                    <div class="tool text-secondary">
-                        <p>Other</p>
-                    </div>
-
-                    <div class="button-wrapper p-2">
-                        <a class="btn">
-                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Chat</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-<main class="content col-9 h-100 px-5">
-    <div class="nav-wrapper">
-        {{#if logged_in}}
-        <a class="logout" id="logoutBtn">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Logout</p>
-        </a>
-        {{else}}
-        <a class="login" href="/login">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/filled-chat.png"/><p>Login</p>
-        </a>
-    </div>
-    {{{ body }}}
-</main>
+    <main>
+        {{{ body }}}
+    </main>
 
     {{#if logged_in}}
-    <script src='/js/logout.js'></script>
+        <script src='/js/logout.js'></script>
     {{/if}}
 
 </body>

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sgc1992/Onboard#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^9.0.2",

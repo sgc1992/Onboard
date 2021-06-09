@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Todos } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-route.post('/', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const newTodos = await Todos.create({
             ...req.body,
@@ -15,7 +15,7 @@ route.post('/', withAuth, async (req, res) => {
     }
 });
 
-route.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const todosData = await Todos.destroy({
             where: {

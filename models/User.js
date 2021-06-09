@@ -16,10 +16,6 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    admin: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,

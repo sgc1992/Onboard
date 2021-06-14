@@ -1,7 +1,7 @@
-<div class="row">
-  <div class="col-7">
-    <div class="welcome-wrapper text-white">
-      <h2>Welcome, {user.name}</h2>
+<div class="row flex-row">
+  <div class="col-6">
+    <div class="welcome-wrapper text-white p-5">
+     <h2>Welcome, {{user.name}}</h2> 
       <p>Please feel your second home<br>
         We are pleased to welcome you as the newest member at Onboard.<br>
         We hope you will find work here fun, rewarding and challenging.<br>
@@ -9,11 +9,14 @@
         Much is expected from you as part of the team.<br>
         We are all working for a common goal and your contribution is integral.<br>
         Improvements and innovative ideas are always welcomed, so please always do share.<br>
-        CEO<br>
+        CEO<br><br>
         Ben Wilson</p>
+        <a class="welcome-btn" href="/todos">
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/todo-list.png"/><p>To-Dos</p>
+        </a>
+    </div>
   </div>
-
-  <div class="col-5">
-    <img src="" />
+  <div class="col-6">
+    <img class="w-100" src="/images/Boss.png"/>
   </div>
 </div>

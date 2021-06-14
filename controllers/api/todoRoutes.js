@@ -2,20 +2,21 @@ const router = require('express').Router();
 const { Todos } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const newTodos = await Todos.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
-
-        res.status(200).json(newTodos);
-    } catch (err) {
-        res.status(400).json(err);
+            title: req.body.title,
+            description: req.body.description,
+            user_id: req.session.user_id
+        })
+        res.status(200).json(newTodos)
+  
+    } catch (error) {
+        res.status(400).json({ error: error.toString() });
     }
-});
+  });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/delete/:id', withAuth, async (req, res) => {
     try {
         const todosData = await Todos.destroy({
             where: {

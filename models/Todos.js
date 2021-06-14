@@ -18,15 +18,6 @@ Todos.init(
         description: {
             type: DataTypes.STRING,
         },
-        date_due: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-        todo_status: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -40,7 +31,7 @@ Todos.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'todos',
     }
 );
 

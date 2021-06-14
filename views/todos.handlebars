@@ -1,29 +1,29 @@
-<div class="container todo-container ">
-    <h1 class="d-flex justify-content-start">To-Do List</h1>
-    <!-- dynamically add in js -->
-    <div class="container todo-cards-container">
-        <!-- user's to do that saves to db with button that fills when finished -->
-    </div>
-    <!-- add to do's button that triggers a add todo section-->
-    <div class="container button-container">
-        <button type="button" class="btn btn-todo">
-            <img src="https://img.icons8.com/ios-glyphs/96/ffffff/plus-math.png"/>
-            <br>
-        Add Todos
-        </button>
-    </div>
-    
-    <!-- add to dos card-->
-    <div class="card add-todo-card">
-        <!-- form with user input -->
-        <div class="form-group user-todo-input">
-            <input type="input" class="form-control" id="user-todo" placeholder="Enter task">
+<div class="container-todo">
+    <div class="row">
+        <h2>To-Do List</h2>
+        <div class="col-7">
+
+            <div class="todo-wrapper">
+                {{#each todos}}
+                <div class="todo">
+                    <p>{{this.description}}</p>
+                    <div class="wrapper">
+                        <a class="welcome-btn h-100" data-id="{{this.id}}" id="deleteTodo">x</a>
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                </div>
+                {{/each}}
+            </div>
         </div>
-        <!-- add todo button -->
-        <button type="button" class="btn btn-dark btn-add-todo">
-            <!-- plus icon -->
-            <img src="https://img.icons8.com/ios-glyphs/48/ffffff/plus-math.png"/>
-            Add Todo
-        </button>
+        
+        <div class="col-5">
+            <div class="add-input">
+                <input type="text" placeholder="title" name="todos" id="todo-title">
+                <input type="text" placeholder="description" name="todos" id="todo-description">
+                <a class="welcome-btn" id="addTodo">
+                    <img src="https://img.icons8.com/ios-glyphs/48/ffffff/plus-math.png"/><p>Add Todo</p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>

@@ -81,6 +81,10 @@ header a {
   margin-left: 1vw;
 }
 
+.navbar {
+  padding: 2rem;
+}
+
 .btn:hover {
   background: var(--gradient-main);
   color: var(--main-color);

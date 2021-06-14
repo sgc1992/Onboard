@@ -16,6 +16,7 @@ const loginFormHandler = async (event) => {
         } else {
           $('.form-input').css('border', '2px solid rgba(255, 0, 0, 0.253)')
           $('.wrong').css('display', 'block');
+          alert('Incorrect username or password')
         }
   }
 };

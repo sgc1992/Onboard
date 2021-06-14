@@ -1,20 +1,17 @@
 [
     {
+        "id": "1",
         "title": "Return Contract",
-        "description": "Sign your life away",
-        "date_due": "26/09/2021",
-        "todo_status": false
+        "description": "Sign your life away"
     },
     {
+        "id": "2",
         "title": "Return Super Form",
-        "description": "Cash in the bank for when you're old and wrinkled",
-        "date_due": "26/09/2021",
-        "todo_status": false
+        "description": "Cash in the bank for when you're old and wrinkled"
     },
     {
+        "id": "3",
         "title": "Check Out The Team",
-        "description": "Review our team structure in the company section",
-        "date_due": "26/09/2021",
-        "todo_status": false
+        "description": "Review our team structure in the company section"
     }
 ]

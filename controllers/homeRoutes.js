@@ -29,7 +29,9 @@ router.get('/todos', redirect, async (req, res) => {
 
         res.render('todos', {
             layout: 'main',
-            logged_in: req.session.logged_in
+            todos,
+            logged_in: req.session.logged_in,
+            
         });
 
     } catch (err) {
@@ -37,7 +39,7 @@ router.get('/todos', redirect, async (req, res) => {
     }
 });
 
-router.get('/project', redirect, async (req, res) => {
+router.get('/calender', redirect, async (req, res) => {
     try {
         const projectData = await Project.findAll({
             include: [

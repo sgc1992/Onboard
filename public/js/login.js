@@ -58,4 +58,4 @@ if (response.ok) {
 
 $('.login-form').on('submit', loginFormHandler);
 $('.signup-form').on('submit', signupFormHandler);
-$('#logout').on('click', logout);
+$('#logoutBtn').on('click', logout);

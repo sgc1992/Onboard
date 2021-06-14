@@ -10,6 +10,11 @@ User.hasMany(Project, {
 User.hasMany(Todos, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
+})
+
+User.hasMany(Todos, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Project.belongsTo(User, {

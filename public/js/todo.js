@@ -1,26 +1,42 @@
-const toDoBtn = $('.btn-todo');
-const addToDoBtn = $('.btn-add-todo');
-const todoCardContainer = $('.todo-cards-container');
-const addTodoCard = $('.add-todo-card');
+const newTodos = async (event) => {
+    event.preventDefault();
 
-addTodoCard.style.display = 'none';
+    const title = $('#todo-title').val().trim();
+    const description = $('#todo-description').val().trim();
 
-toDoBtn.addEventListener("click", function() {
-    addTodoCard.style.display = "block";
-});
+    if (title && description) {
+        const response = await fetch('/api/todo', {
+            method: 'POST',
+            body: JSON.stringify({title, description }),
+            headers: { 'Content-Type': 'application/json' },
+        });
 
-addToDoBtn.addEventListener("click", function(){
-    const userInput = $('#user-todo').val();
+        if (response.ok) {
+            document.location.reload();
+          } else {
+            console.log('ERROR')
+          }
+    }
 
-    let toDoAddedCard = document.createElement('div');
-    toDoAddedCard.setAttribute('class', "card todo-card");
-    toDoAddedCard.innerHTML = `
-        <div class="card-body ">
-            <div class="form-group form-check checkbox">
-                <label class="form-check-label mr-4" for="exampleCheck1">${userInput}</label>
-                <input type="checkbox" class="form-check-input " id="exampleCheck1">
-            </div>
-        </div>
-    `;
-    todoCardContainer.appendChild(toDoAddedCard);
-});
+}
+
+const deleteToDo = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+      console.log(id); 
+
+      const response = await fetch(`/api/todo/delete/${id}`, {
+          method: 'DELETE',
+      });
+
+      if (response.ok) {
+          document.location.reload();
+      } else {
+          console.log('Failed to delete blog post'); 
+      }
+  }
+}; 
+
+
+$('#addTodo').on('click', newTodos);
+$('#deleteTodo').on('click', deleteToDo);

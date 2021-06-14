@@ -49,7 +49,7 @@ THEN they are presented with a welcome pop up that displays a message from the C
 ## LINKS 🔗
 
 [REPOSITORY](https://github.com/sgc1992/Onboard/)
-[DEPLOYED](https://mighty-gorge-97116.herokuapp.com/)
+[DEPLOYED](https://murmuring-refuge-71106.herokuapp.com/)
 
 <a name="features"></a>
 
